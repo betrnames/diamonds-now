@@ -202,9 +202,9 @@ export default function Ring3D() {
     mouse.current.x = MathUtils.lerp(mouse.current.x, pointer.x * 0.15, 0.04)
     mouse.current.y = MathUtils.lerp(mouse.current.y, pointer.y * 0.1, 0.04)
 
-    ringRef.current.rotation.x = -0.35 + mouse.current.y * 0.12
-    ringRef.current.rotation.y = -0.3 + state.clock.elapsedTime * 0.04 + mouse.current.x * Math.PI * 0.3
-    ringRef.current.rotation.z = -0.03
+    ringRef.current.rotation.x = -0.75 + mouse.current.y * 0.12
+    ringRef.current.rotation.y = state.clock.elapsedTime * 0.15 + mouse.current.x * Math.PI * 0.3
+    ringRef.current.rotation.z = 0.1
   })
 
   return (

@@ -78,10 +78,9 @@ export default function Hero() {
           className="order-1 md:order-2 w-full aspect-square max-w-[320px] sm:max-w-[400px] md:max-w-[420px] mx-auto"
         >
           <Canvas
-            camera={{ position: [0, 1.5, 4.5], fov: 35 }}
+            camera={{ position: [0, 2, 3.2], fov: 40 }}
             gl={{ antialias: true, alpha: true }}
-            className="!absolute inset-0"
-            style={{ background: 'transparent' }}
+            style={{ width: '100%', height: '100%', background: 'transparent' }}
           >
             <Suspense fallback={null}>
               <Ring3D />
