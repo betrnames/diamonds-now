@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Diamond } from 'lucide-react'
+import { Gem } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 const links = [
   { label: 'Why Lab', href: '#why' },
@@ -33,7 +33,7 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <Diamond className="size-5 text-primary transition-transform group-hover:scale-110" />
+          <Gem className="size-5 text-primary transition-transform group-hover:scale-110" />
           <span className="font-sans text-base sm:text-lg font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors" style={{ WebkitFontSmoothing: 'antialiased' }}>
             Diamonds<span className="text-primary">.now</span>
           </span>

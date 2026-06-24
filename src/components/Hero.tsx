@@ -1,4 +1,8 @@
+import { Suspense, lazy } from 'react'
+import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
+
+const Ring3D = lazy(() => import('./Ring3D'))
 
 export default function Hero() {
   return (
@@ -73,25 +77,16 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="order-1 md:order-2 w-full aspect-square max-w-[320px] sm:max-w-[400px] md:max-w-[420px] mx-auto"
         >
-          <div className="relative w-full h-full">
-            <div
-              className="absolute inset-0 m-auto w-[35%] h-[35%] rounded-full blur-2xl opacity-15"
-              style={{
-                background: 'radial-gradient(circle, oklch(0.85 0.03 230) 0%, transparent 70%)',
-              }}
-            />
-            <video
-              src="/diamond-hero.webm"
-              autoPlay
-              loop
-              muted
-              playsInline
-              controls={false}
-              disablePictureInPicture
-              controlsList="nodownload nofullscreen noremoteplayback"
-              className="relative z-10 w-full h-full object-contain pointer-events-none"
-            />
-          </div>
+          <Canvas
+            camera={{ position: [0, 1.5, 4.5], fov: 35 }}
+            gl={{ antialias: true, alpha: true }}
+            className="!absolute inset-0"
+            style={{ background: 'transparent' }}
+          >
+            <Suspense fallback={null}>
+              <Ring3D />
+            </Suspense>
+          </Canvas>
         </motion.div>
       </div>
 
