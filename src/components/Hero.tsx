@@ -78,7 +78,7 @@ export default function Hero() {
           className="order-1 md:order-2 w-full aspect-square max-w-[320px] sm:max-w-[400px] md:max-w-[420px] mx-auto"
         >
           <Canvas
-            camera={{ position: [0, 2, 3.2], fov: 40 }}
+            camera={{ position: [0, 0.8, 2], fov: 35 }}
             gl={{ antialias: true, alpha: true }}
             style={{ width: '100%', height: '100%', background: 'transparent' }}
           >
